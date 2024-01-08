@@ -4,7 +4,7 @@ import LinkButton from "../layout/LinkButton";
 import CardProject from "../projects/CardProject";
 
 const Projects = () => {
-  const [thereProjects, setThereProjects] = useState(null);
+  const [thereProjects, setThereProjects] = useState([]);
 
   useEffect(() => {
     if (localStorage.getItem("projects")) {
@@ -14,6 +14,14 @@ const Projects = () => {
     }
   }, []);
 
+  function deleteProject(id) {
+    const newsProjects = thereProjects.filter((proj) => proj.id !== id);
+
+    setThereProjects(newsProjects);
+
+    localStorage.setItem("projects", JSON.stringify(newsProjects));
+  }
+
   return (
     <section className="h-screen flex flex-col gap-8 p-12">
       <div className="flex justify-between items-center">
@@ -22,11 +30,15 @@ const Projects = () => {
       </div>
 
       <div className="flex justify-between items-center gap-5 flex-wrap">
-        {thereProjects?.map((proj, index) => (
-          <CardProject dataProject={proj} key={index} />
+        {thereProjects?.map((proj) => (
+          <CardProject
+            dataProject={proj}
+            key={proj.id}
+            deleteProject={deleteProject}
+          />
         ))}
 
-        {!thereProjects && <p>Não ha projetos</p>}
+        {thereProjects.length === 0 && <p>Não ha projetos</p>}
       </div>
     </section>
   );

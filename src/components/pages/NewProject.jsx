@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
 import FormProject from "../projects/FormProject";
 
 const NewProject = () => {
   const navigate = useNavigate();
 
   function createProject(data) {
+    data.id = uuidv4();
+
     if (localStorage.getItem("projects")) {
       const projects = localStorage.getItem("projects");
       const projectsArr = JSON.parse(projects);
@@ -16,7 +20,7 @@ const NewProject = () => {
       localStorage.setItem("projects", JSON.stringify(projects));
     }
 
-    navigate("/projects")
+    navigate("/projects");
   }
 
   return (
