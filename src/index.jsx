@@ -6,6 +6,7 @@ import "./index.css";
 import Home from "./components/pages/Home.jsx";
 import NewProject from "./components/pages/NewProject.jsx";
 import Projects from "./components/pages/Projects.jsx";
+import Project from "./components/pages/Project.jsx";
 import Error from "./components/pages/Error.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/project/:projectId",
+        element: <Project />,
       },
     ],
   },

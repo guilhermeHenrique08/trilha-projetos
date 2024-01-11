@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
       </div>    
       <p className="mt-3 text-gray-500 text-center">
-        &copy; 2023 MovieFlow by Guilherme Marques
+        &copy; 2023 TrilhaProject by Guilherme Marques
       </p>
     </footer>
   );

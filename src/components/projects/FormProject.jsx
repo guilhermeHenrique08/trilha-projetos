@@ -9,7 +9,7 @@ const schema = z.object({
   category_id: z.string(),
 });
 
-const FormProject = ({ onSubmit }) => {
+const FormProject = ({ onSubmit, textBtn }) => {
   const methods = useForm({
     resolver: zodResolver(schema),
   });
@@ -36,7 +36,7 @@ const FormProject = ({ onSubmit }) => {
   return (
     <FormProvider {...methods}>
       <form
-        className="flex flex-col gap-4 w-full max-w-md"
+        className="flex flex-col gap-4 w-full max-w-xl"
         onSubmit={methods.handleSubmit(onSubmit)}
       >
         <Form.Group>
@@ -71,7 +71,7 @@ const FormProject = ({ onSubmit }) => {
         </Form.Group>
 
         <button type="submit" className="btn">
-          Criar Projeto
+          {textBtn}
         </button>
       </form>
     </FormProvider>
