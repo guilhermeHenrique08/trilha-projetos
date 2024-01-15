@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
+import { PiTrashFill } from "react-icons/pi";
 
-function CardProject({ dataProject, deleteProject }) {
+const CardProject = ({ dataProject, deleteProject }) => {
   function onDelete(e) {
     e.preventDefault();
     deleteProject(dataProject.id);
@@ -28,20 +29,20 @@ function CardProject({ dataProject, deleteProject }) {
       <div className="flex items-center gap-3">
         <Link
           to={`/project/${dataProject.id}`}
-          className="flex btn max-w-max items-center gap-1"
+          className="btn-card"
         >
           Editar <BsPencil />
         </Link>
         <button
-          className="flex btn max-w-max items-center gap-1"
+          className="btn-card "
           onClick={onDelete}
         >
           Excluir
-          <BsFillTrashFill />
+          <PiTrashFill />
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default CardProject;

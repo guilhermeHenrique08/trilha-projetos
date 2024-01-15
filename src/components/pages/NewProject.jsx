@@ -8,6 +8,8 @@ const NewProject = () => {
 
   function createProject(data) {
     data.id = uuidv4();
+    data.cost = 0;
+    data.services = [];
 
     if (localStorage.getItem("projects")) {
       const projects = localStorage.getItem("projects");
