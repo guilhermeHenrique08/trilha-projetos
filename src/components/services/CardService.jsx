@@ -7,7 +7,7 @@ const CardService = ({ dataService, handleRemove }) => {
   }
 
   return (
-    <div className="bg-slate-200 w-64 min-h-52 max-h-52 p-4 rounded flex flex-col justify-between">
+    <div className="bg-slate-200 w-72 h-52 p-4 rounded flex flex-col justify-between">
       <h3 className="text-cyan-500 font-bold text-xl max-w-full overflow-auto">
         {dataService.name}
       </h3>

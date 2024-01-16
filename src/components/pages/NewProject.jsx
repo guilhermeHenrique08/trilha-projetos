@@ -26,9 +26,9 @@ const NewProject = () => {
   }
 
   return (
-    <section className="min-h-screen flex justify-center items-center flex-col gap-4">
-      <h1 className="text-4xl font-bold">Crie seu projeto</h1>
-      <p className="text-lg text-cyan-500">
+    <section className="min-h-screen flex justify-center items-center flex-col gap-4 px-3">
+      <h1 className="text-3xl sm:text-4xl font-bold">Crie seu projeto</h1>
+      <p className="text-center text-lg sm:text-lg text-cyan-500">
         Crie seu projeto para depois adicionar seu serviços
       </p>
 

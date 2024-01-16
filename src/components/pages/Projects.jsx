@@ -23,9 +23,9 @@ const Projects = () => {
   }
 
   return (
-    <section className="min-h-screen flex flex-col gap-14 px-14 py-7">
-      <div className="flex justify-between items-center">
-        <h1 className="text-4xl font-bold">Meus projetos</h1>
+    <section className="min-h-screen flex flex-col gap-14 px-6 py-5 sm:px-14 sm:py-7">
+      <div className="flex flex-col gap-3 items-start sm:flex-row sm:justify-between sm:items-center">
+        <h1 className="text-3xl sm:text-4xl font-bold">Meus projetos</h1>
         <LinkButton to="/newproject" text="Criar Projeto" />
       </div>
 

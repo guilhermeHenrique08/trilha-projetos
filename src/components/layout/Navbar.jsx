@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-7">
+    <nav className="flex justify-between items-center p-7 gap-3 flex-col sm:flex-row">
       <h1 className="font-extrabold text-xl">Trilha Project</h1>
 
       <ul className="flex gap-7">

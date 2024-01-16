@@ -10,7 +10,7 @@ const CardProject = ({ dataProject, deleteProject }) => {
   }
 
   return (
-    <div className="bg-slate-200 max-w-80 min-w-80 min-h-52 max-h-52 p-4 rounded flex flex-col justify-between">
+    <div className="bg-slate-200 w-72 sm:w-80 h-52 p-4 rounded flex flex-col justify-between">
       <h2 className="text-cyan-500 font-bold text-xl max-w-full overflow-auto">
         {dataProject.name}
       </h2>

@@ -94,9 +94,9 @@ const Project = () => {
   }
 
   return (
-    <section className="min-h-screen mx-auto flex flex-col gap-5 max-w-xl py-8">
+    <section className="min-h-screen px-6 py-5 mx-auto flex flex-col gap-5 max-w-2xl sm:py-8">
       <div className="pb-10 border-b-2 border-gray-500 flex flex-col gap-4">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center gap-5">
           <h1 className="text-4xl font-bold text-cyan-500">
             Projeto: {project.name}
           </h1>
@@ -132,7 +132,7 @@ const Project = () => {
       </div>
 
       <div className="pb-10 border-b-2 border-gray-500 flex flex-col gap-4">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center gap-5">
           <h2 className="text-2xl font-bold">Adicione um serviço</h2>
 
           <button onClick={toggleServiceForm} className="btn">

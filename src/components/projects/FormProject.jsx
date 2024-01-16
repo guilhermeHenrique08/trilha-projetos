@@ -36,7 +36,7 @@ const FormProject = ({ onSubmit, textBtn }) => {
   return (
     <FormProvider {...methods}>
       <form
-        className="flex flex-col gap-4 w-full max-w-xl"
+        className="flex flex-col gap-4 w-full max-w-2xl"
         onSubmit={methods.handleSubmit(onSubmit)}
       >
         <Form.Group>
